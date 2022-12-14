@@ -1,0 +1,147 @@
+.input-box {
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.input-text {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+
+.input-text > input, .input-box > select {
+    width: inherit;
+    height: inherit;
+    padding: 8px 30px 8px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: var(--Gray);
+    font-family: var(--Mukta);
+    font-size: 13px;
+    font-weight: 200;
+    color: var(--Gray);    
+}
+
+.input-text > input:focus, .input-box > select:focus {
+    outline: none;
+}
+
+.input-text > input::placeholder {
+    color: var(--Gray);
+}
+
+.input-text > input.focus-colors, .input-box > select.focus-colors {
+    border-color: var(--Blue);
+    caret-color: var(--Blue);
+    color: var(--Blue);
+    border-width: 1px;
+    box-shadow: 0px 2px 5px #a6a6a637;
+}
+
+.input-text > img {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    right: 15%;
+    visibility: hidden;
+    opacity: 0.5;
+}
+
+.input-text > input.error, .input-box > .input-dropdown.error {
+    border-color: #ff0000;
+    color: #ff0000;
+    caret-color: red;
+    box-shadow: 0px 0px 5px #fc525237;
+}
+
+.input-box > span.error {
+    margin-top: 1px;
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: var(--Mukta);
+    color: #f34747;
+}
+
+.input-box > select.input-dropdown {
+    cursor: pointer;
+}
+
+.input-box > select.input-dropdown > option {
+    color: var(--DarkGray);
+}
+
+.input-box > .input-password > img {
+    visibility: initial;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.lock {
+    opacity: 0.5;
+}
+
+.password-req {
+    width: fit-content;
+    margin: 0px 0px 0px 20px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    max-height: 0;
+}
+
+.password-req > div {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.password-req > div::before {
+    display: block;
+    content: "";
+    height: 18px;
+    width: 1px;
+    background: #716f6f;
+}
+
+.password-req > div > p {
+    font-family: var(--Mukta);
+    font-size: 10px;
+    font-weight: 200;
+    color: #716f6f;
+    display: inline;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+.input-box > button {
+    width: inherit;
+    height: inherit;
+    border-radius: 8px;
+
+    font-family: var(--Mukta);
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid var(--Blue);
+    background: white;
+    color: var(--Blue);
+}
+
+.input-box > button:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+    background: var(--Blue);
+    color: white;
+    border: none;
+    box-shadow: 0px 2px 10px rgba(66, 66, 67, 0.454);
+}
+
+/* CSS for Specific Purposes */
+.emphasis {
+    font-weight: 700 !important;
+}

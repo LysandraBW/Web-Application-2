@@ -1,0 +1,162 @@
+<head>
+    <!-- STYLING -->
+    <!-- Cascading Style Sheets (CSS) -->
+    <link rel="stylesheet" href="../static/css/nav.css">
+    <link rel="stylesheet" href="../static/css/input.css">
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/createAccount.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Mukta:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- SCRIPTS -->
+    <!-- JQuery Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Defined Scripts -->
+    <script src="../static/scripts/general/all.js"></script>
+    <script src="../static/scripts/carAuto.js"></script>
+    <script src="../static/scripts/form/form.js"></script>
+    <script src="../static/scripts/form/validateForm.js"></script>
+    <script src="../static/scripts/form/formFunctions.js"></script>
+    <script src="../static/scripts/general/generalFunctions.js"></script>
+    <script src="../static/scripts/database/database.js"></script>
+
+    <input type="hidden" name="DB_Usernames" value="{{usernames|join(',')}}">
+</head>
+
+<body>
+    <nav>
+        <img src="../static/images/earth.png">
+        <div>
+            <ul>Link 1</ul>
+            <ul>Link 2</ul>
+            <ul>Link 3</ul>
+            <ul><a>Link 4</a></ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Lorem Ipsum</h1>
+        <p>Generic text here.</p>
+    </header>
+    <div class="main">
+        <form method="POST" action="/createAccount">
+            <div class="input-box">
+                <div class="input-text">
+                    <input placeholder="First Name" type="text" name="First_Name" spellcheck="false">
+                    <img src="../static/images/check.png">
+                </div>
+                <span class="error hidden">Invalid Name</span>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text">
+                    <input placeholder="Last Name" type="text" name="Last_Name" spellcheck="false">
+                    <img src="../static/images/check.png">
+                </div>
+                <span class="error hidden">Invalid Name</span>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text">
+                    <input placeholder="Email Address" type="email" name="Email_Address" spellcheck="false">
+                    <img src="../static/images/check.png">
+                </div>
+                <span class="error hidden">Invalid Email Address</span>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text">
+                    <input placeholder="Phone Number" type="text" name="Phone_Number" spellcheck="false">
+                    <img src="../static/images/check.png">
+                </div>
+                <span class="error hidden">Invalid Phone #, Format 000-000-0000</span>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text">
+                    <input placeholder="VIN" type="text" name="VIN" spellcheck="false">
+                    <img src="../static/images/check.png">
+                </div>
+                <span class="error hidden">Invalid VIN</span>
+            </div>
+    
+            <div class="input-box">
+                <select class="input-dropdown" name="Car_Make" id="Car_Make">
+                    <option selected disabled>Make</option>
+                </select>
+                <span class="error hidden">Must Select Make</span>
+            </div>
+    
+            <div class="input-box">
+                <select class="input-dropdown" name="Car_Model" id="Car_Model">
+                    <option selected disabled>Model</option>
+                </select>
+                <span class="error hidden">Must Select Model</span>
+            </div>
+    
+            <div class="input-box">
+                <select class="input-dropdown" name="Model_Year" id="Model_Year">
+                    <option selected disabled>Year</option>
+                </select>
+                <span class="error hidden">Must Select Year</span>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text">
+                    <input placeholder="Username" type="text" name="Username" spellcheck="false">
+                    <img src="../static/images/check.png">
+                </div>
+                <span class="error hidden">Username Taken</span>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text input-password">
+                    <input placeholder="Password" type="password" class="hidden-password P1" name="Password" spellcheck="false">
+                    <input placeholder="Password" type="text" class="none visible-password P1" spellcheck="false">
+                    <img class="lock" src="../static/images/lock.png">
+                </div>
+                <span class="error hidden">Must Fulfill Requirements</span>
+                <div class="password-req">
+                    <div class="req-length">
+                        <img src="../static/images/sm-dash.png">
+                        <p>Must have at least 5 characters</p>
+                    </div>
+                    <div class="req-number">
+                        <img src="../static/images/sm-dash.png">
+                        <p>Must have at least 1 number</p>
+                    </div>
+                    <div class="req-uppercase">
+                        <img src="../static/images/sm-dash.png">
+                        <p>Must have at least 1 upper-case letter</p>
+                    </div>
+                    <div class="req-lowercase">
+                        <img src="../static/images/sm-dash.png">
+                        <p>Must have at least 1 lower-case letter</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="input-box">
+                <div class="input-text input-password">
+                    <input placeholder="Verify Password" type="password" class="hidden-password P2" name="Password" spellcheck="false">
+                    <input placeholder="Verify Password" type="text" class="none visible-password P2" spellcheck="false">
+                    <img class="lock" src="../static/images/lock.png">
+                </div>
+                <span class="error hidden">Must Fulfill Requirements</span>
+            </div>
+    
+            <div class="input-box" id="Create_Account">
+                <button>Create New Account</button>
+            </div>
+    
+            <input type="hidden" name="Total_Car_Makes">
+            <input type="hidden" name="Total_Car_Models">
+            <input type="hidden" name="Total_Model_Years">
+        </form>
+        <div>
+            <img src="../static/images/earth_shadow.png">
+        </div>
+    </div>
+    
+</body>

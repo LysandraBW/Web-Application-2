@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div {
+    display: flex;
+    column-gap: 25px;
+}
+
+nav > img {
+    width: 50px;
+    height: 50px;
+}
+
+nav > div > ul {
+    font-family: var(--Mukta);
+}
+

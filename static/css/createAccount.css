@@ -1,0 +1,85 @@
+header > h1, header > p {
+    font-family: var(--Mukta);
+}
+
+body {
+    padding: 10px 20px 10px 20px;
+}
+
+header {
+    margin: 20px 0px;
+}
+
+div.main {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    background-color: red;
+    align-items: center;
+}
+
+div#Create_Account {
+    margin-bottom: 0px;
+}
+
+form {
+    padding: 10px 0px 20px 0px;
+    height: fit-content;
+    display: grid;
+
+    grid-template-areas:"fname lname"
+                        "email phone"
+                        "vin ."
+                        "make model"
+                        "year ."
+                        "username ."
+                        "password verifypassword"
+                        "button button";
+}
+
+form > div:nth-child(1) {
+    grid-area: fname;
+}
+
+form > div:nth-child(2) {
+    grid-area: lname;
+}
+
+form > div:nth-child(3) {
+    grid-area: email;
+}
+
+form > div:nth-child(4) {
+    grid-area: phone;
+}
+
+form > div:nth-child(5) {
+    grid-area: vin;
+}
+
+form > div:nth-child(6) {
+    grid-area: make;
+}
+
+form > div:nth-child(7) {
+    grid-area: model;
+}
+
+form > div:nth-child(8) {
+    grid-area: year;
+}
+
+form > div:nth-child(9) {
+    grid-area: username;
+}
+
+form > div:nth-child(10) {
+    grid-area: password;
+}
+
+form > div:nth-child(11) {
+    grid-area: verifypassword;
+}
+
+form > div:nth-child(12) {
+    grid-area: button;
+}

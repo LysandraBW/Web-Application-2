@@ -1,0 +1,70 @@
+/* Variables */
+:root
+{
+    /* Colors */
+    --White: #FFF;
+    --Gray: #a6a6a6c4;
+    --LightGray: #c1c1c124;
+    --DarkGray: #9e9898;
+    --Charcoal: #5e5e5e;
+    --Black: #000;
+    --Blue: #3b429d;
+
+    /* Font(s) */
+    --Lato: 'Lato', sans-serif;
+    --Kanit: 'Kanit', sans-serif;
+    --RobotoMono: 'Roboto Mono', sans-serif;
+    --Mukta: 'Mukta', sans-serif;
+}
+
+/* Page Basics */
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body
+{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Homogenizing */
+a
+{
+    text-decoration: none;
+}
+
+li
+{
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Initializing */
+span, input 
+{
+    font-family: var(--Lato);
+    font-weight: 500;
+}
+
+/* CSS Unspecific to 1 HTML */
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.auto-height {
+    height: auto !important;
+}

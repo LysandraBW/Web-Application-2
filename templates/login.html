@@ -1,0 +1,47 @@
+<head>
+    <!-- STYLING -->
+    <!-- Cascading Style Sheets (CSS) -->
+    <link rel="stylesheet" href="../static/css/input.css">
+    <link rel="stylesheet" href="../static/css/global.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Mukta:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- SCRIPTS -->
+    <!-- JQuery Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- Defined Scripts -->
+    <script src="../static/scripts/general/all.js"></script>
+    <script src="../static/scripts/form/form.js"></script>
+    <script src="../static/scripts/form/validateForm.js"></script>
+    <script src="../static/scripts/form/formFunctions.js"></script>
+    <script src="../static/scripts/general/generalFunctions.js"></script>
+    <script src="../static/scripts/database/database.js"></script>
+</head>
+
+<form method="POST" action="/login">
+    <div class="input-box">
+        <div class="input-text">
+            <input placeholder="Username" type="text" class="login" name="Username" spellcheck="false">
+            <img src="../static/images/check.png">
+        </div>
+        <span class="error hidden">Must Enter Username</span>
+    </div>
+
+    <div class="input-box">
+        <div class="input-text input-password">
+            <input placeholder="Password" type="password" class="login hidden-password P1" name="Password" id="Login_Password_1" spellcheck="false">
+            <input placeholder="Password" type="text" class="login none visible-password P1" id="Login_Password_2" spellcheck="false">
+            <img class="lock" src="../static/images/lock.png">
+        </div>
+        <span class="error hidden">Must Enter Password</span>
+    </div>
+
+    <div class="input-box" id="Login">
+        <button>Create New Account</button>
+        <span class="error hidden">Invalid Username or Password</span>
+    </div>
+
+    <input type="hidden" name="Account_Not_Found" value="{{accountNotFound}}">
+</form>
